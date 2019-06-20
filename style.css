@@ -45,7 +45,7 @@ label input:checked ~ .checkmark:after {
   display: block;
 }
 
-/* tyling the dot */
+/* styling the dot */
 label .checkmark:after {
   top: 7px;
   left: 7px;
