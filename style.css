@@ -1,0 +1,56 @@
+* {
+  font-family: Arial, Helvetica, sans-serif
+}
+
+input[type="radio"] {
+  opacity: 0;
+}
+
+.radio {
+  display: inline-block;
+}
+
+.checkmark {
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  background-color: #ccc;;
+  opacity: 0.75;
+  border-radius: 50%;
+  transition: 0.25s;
+  margin-right: -10px;
+  transform: translate(-20px, 6px);
+}
+
+.checkmark:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+/* when checked */
+label input:checked ~ .checkmark {
+  background-color: blue;
+  opacity: 1;
+}
+
+/* create a dot in the middle */
+.checkmark:after {
+  content: "";
+  position: relative;
+  display: none;
+}
+
+/* Show the dot when checked */
+label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* tyling the dot */
+label .checkmark:after {
+  top: 7px;
+  left: 7px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: white;
+}
